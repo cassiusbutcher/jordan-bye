@@ -1,55 +1,96 @@
-@charset "utf-8";
+/* line 22, /Users/cash/Dropbox/Software/Projects/jordan-bye-art/middleman/source/stylesheets/all.css.scss */
+.slideshow, .slideshow li span {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 0; }
 
-body {
-  background: #d4d4d4 url("../images/background.png");
-  text-align: center;
-  font-family: sans-serif; }
-
-h1 {
-  color: rgba(0, 0, 0, .3);
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  background: url("../images/middleman.png") no-repeat center 100px;
-  padding: 350px 0 10px;
-  margin: 0; }
-
-.doc {
-  font-size: 14px;
-  margin: 0; }
-  .doc:before,
-  .doc:after {
-    opacity: .2;
-    padding: 6px;
-    font-style: normal;
-    position: relative;
-    content: "•"; }
-  .doc a {
-    color: rgba(0, 0, 0, 0.3); }
-    .doc a:hover {
-      color: #666; }
-
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s; }
-
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
+@-webkit-keyframes imageAnimation {
+  0% {
     opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+  8% {
     opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+  17% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  25% {
+    opacity: 0;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  100% {
+    opacity: 0; } }
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+  8% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+  17% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  25% {
+    opacity: 0;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  100% {
+    opacity: 0; } }
+/* line 52, /Users/cash/Dropbox/Software/Projects/jordan-bye-art/middleman/source/stylesheets/all.css.scss */
+.slideshow {
+  position: fixed;
+  margin: 0;
+  list-style: none; }
+  /* line 58, /Users/cash/Dropbox/Software/Projects/jordan-bye-art/middleman/source/stylesheets/all.css.scss */
+  .slideshow li span {
+    position: absolute;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+            animation: imageAnimation 36s linear infinite 0s; }
+  /* line 68, /Users/cash/Dropbox/Software/Projects/jordan-bye-art/middleman/source/stylesheets/all.css.scss */
+  .slideshow li:nth-child(1) span {
+    background-image: url("../images/test1.jpg"); }
+  /* line 68, /Users/cash/Dropbox/Software/Projects/jordan-bye-art/middleman/source/stylesheets/all.css.scss */
+  .slideshow li:nth-child(2) span {
+    background-image: url("../images/test2.jpg");
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s; }
+  /* line 68, /Users/cash/Dropbox/Software/Projects/jordan-bye-art/middleman/source/stylesheets/all.css.scss */
+  .slideshow li:nth-child(3) span {
+    background-image: url("../images/test3.jpg");
+    -webkit-animation-delay: 12s;
+            animation-delay: 12s; }
+  /* line 68, /Users/cash/Dropbox/Software/Projects/jordan-bye-art/middleman/source/stylesheets/all.css.scss */
+  .slideshow li:nth-child(4) span {
+    background-image: url("../images/test4.jpg");
+    -webkit-animation-delay: 18s;
+            animation-delay: 18s; }
+  /* line 68, /Users/cash/Dropbox/Software/Projects/jordan-bye-art/middleman/source/stylesheets/all.css.scss */
+  .slideshow li:nth-child(5) span {
+    background-image: url("../images/test5.jpg");
+    -webkit-animation-delay: 24s;
+            animation-delay: 24s; }
+  /* line 68, /Users/cash/Dropbox/Software/Projects/jordan-bye-art/middleman/source/stylesheets/all.css.scss */
+  .slideshow li:nth-child(6) span {
+    background-image: url("../images/test6.jpg");
+    -webkit-animation-delay: 30s;
+            animation-delay: 30s; }
+
+/* line 75, /Users/cash/Dropbox/Software/Projects/jordan-bye-art/middleman/source/stylesheets/all.css.scss */
+.no-cssanimations .slideshow li span {
+  opacity: 1; }
